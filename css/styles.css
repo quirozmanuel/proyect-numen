@@ -130,6 +130,78 @@ header a.active {
     padding: 5px;
 }
 /* movies section ends */
+
+/* about */
+.about-container{
+    width: 90%;
+    max-width: 80rem;
+    margin: 0 auto;
+    font-size: 10px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-item{
+    background-color: var(--dark-blue);
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0, 0, 0, .1);
+}
+
+.accordion-link{
+    font-size: 1.5rem;
+    color: var(--dark-yellow);
+    text-decoration: none;
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.accordion-link i{
+    color: var(--dark-yellow);
+    padding: .5rem;
+}
+
+.accordion-link .fa-minus{
+    display: none;
+}
+
+.answer{
+    max-height: 0;
+    overflow:hidden;
+    position:relative;
+    background-color: var(--dark-blue);
+    transition: max-height 650ms;
+}
+
+.answer::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    background-color: var(--dark-yellow);
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p{
+    font-size: 1.4rem;
+    color: var(--dark-yellow);
+    padding: 2rem;
+}
+
+.accordion-item:target .answer{
+    max-height: 20rem;
+}
+
+
+
 /*footer stars*/
 footer{
     display:flex;
